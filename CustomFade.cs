@@ -77,7 +77,7 @@ public class CustomFade : MonoBehaviour
         tmpColor.a = 0f;
         facePanel.color = tmpColor;
         
-        panel_G.transform.parent = canvas_G.transform;
+        panel_G.transform.SetParent(canvas_G.transform);
         
         Vector3 panelPosition = panel_G.transform.localPosition;
         Vector3 panelScale = panel_G.transform.localScale;
@@ -88,7 +88,7 @@ public class CustomFade : MonoBehaviour
         panel_G.transform.localPosition = panelPosition;
         panel_G.transform.localScale = panelScale;
         
-        canvas_G.transform.parent = faceCamera.transform;
+        panel_G.transform.SetParent(canvas_G.transform);
         
         canvas_G.layer = LayerMask.NameToLayer("UI");
         panel_G.layer = LayerMask.NameToLayer("UI");
